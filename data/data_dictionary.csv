@@ -1,0 +1,26 @@
+field,description,unit_or_domain,source
+image_id,Identifier assigned during preparation. It prefixes the dominant defect class to the source stem.,string,prepare_dataset.py
+split,train, val, or test. Stratified by dominant class with seed 253.,train|val|test,prepare_dataset.py
+dominant_class,Defect class of the image. In this dataset every annotated image contains one class.,one of the six class names,VOC XML name
+class_name,Class of one bounding box.,missing_hole; mouse_bite; open_circuit; short; spur; spurious_copper,VOC XML name
+xmin ymin xmax ymax,Pascal VOC box in pixels of the source image.,pixels,VOC XML
+width height,Source image size recorded in the XML file.,pixels,VOC XML
+n_objects,Number of valid boxes on the image.,count,prepare_dataset.py
+perturbation,Perturbation family applied to a test image. The value none is the unmodified test image.,brightness; contrast; gaussian_blur; gaussian_noise; jpeg; rotation; scale; illumination; localized_occlusion,generate_perturbations.py
+level,Intensity step within a family. 1 is the mildest and 3 is the strongest.,1|2|3,generate_perturbations.py
+intensity,Numeric parameter for that level. The unit column says what it means.,offset, alpha, kernel, sigma, JPEG quality, degrees, scale factor, gradient strength, or box side fraction,generate_perturbations.py
+precision,TP / (TP + FP) at confidence 0.25 and IoU 0.50.,fraction,calculate_metrics.py
+recall,TP / (TP + FN) at the same operating point.,fraction,calculate_metrics.py
+f1,Harmonic mean of precision and recall.,fraction,calculate_metrics.py
+false_negative_rate,FN / (TP + FN). Equal to 1 - recall when the denominator is the ground-truth count.,fraction,calculate_metrics.py
+map50,Mean over classes of 101-point interpolated average precision at IoU 0.50.,fraction,calculate_metrics.py
+map50_95,Mean of mAP at IoU thresholds 0.50, 0.55, ..., 0.95.,fraction,calculate_metrics.py
+mean_iou_tp,Mean IoU of true-positive matches. Misses are excluded.,fraction,calculate_metrics.py
+mean_iou_including_misses,Mean IoU with each miss scored as 0.,fraction,calculate_metrics.py
+mean_confidence_tp,Mean confidence of true-positive matches.,fraction,calculate_metrics.py
+mean_confidence_including_misses,Mean confidence with each miss scored as 0.,fraction,calculate_metrics.py
+pct_change_recall,100 * (perturbed recall - baseline recall) / baseline recall.,percent,calculate_metrics.py
+likelihood,Integer 1 to 5. For image threats this is derived from the level-2 recall drop. For other threats it is a labeled scenario judgment.,1-5,generate_risk_tables.py
+impact,Integer 1 to 5. Engineering judgment of operational consequence, not a measured loss.,1-5,generate_risk_tables.py
+risk_score,likelihood multiplied by impact.,1-25,generate_risk_tables.py
+evidence_basis,experiment_level2_recall_drop or scenario_assessment.,enum,generate_risk_tables.py

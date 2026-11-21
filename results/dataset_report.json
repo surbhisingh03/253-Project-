@@ -1,0 +1,41 @@
+{
+  "dataset_root": "/Users/surbhisingh/253 final proj/project/data/raw/PCB-DATASET",
+  "images_root": "/Users/surbhisingh/253 final proj/project/data/raw/PCB-DATASET/images",
+  "annotations_root": "/Users/surbhisingh/253 final proj/project/data/raw/PCB-DATASET/Annotations",
+  "n_annotated_images": 693,
+  "n_boxes": 2953,
+  "missing_images": 0,
+  "unknown_class_counts": {},
+  "out_of_bounds_boxes_flagged": 0,
+  "zero_area_boxes": 0,
+  "images_with_mixed_classes": 0,
+  "split_counts": {
+    "train": 483,
+    "test": 108,
+    "val": 102
+  },
+  "class_image_counts": {
+    "open_circuit": 116,
+    "short": 116,
+    "spurious_copper": 116,
+    "missing_hole": 115,
+    "mouse_bite": 115,
+    "spur": 115
+  },
+  "class_box_counts": {
+    "spurious_copper": 503,
+    "missing_hole": 497,
+    "mouse_bite": 492,
+    "short": 491,
+    "spur": 488,
+    "open_circuit": 482
+  },
+  "rotated_image_files_excluded": 693,
+  "seed": 253,
+  "ratios": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15
+  },
+  "note": "Detection experiments use only images that have VOC bounding boxes. Rotated images are excluded so that labels are not applied to a different geometry. Perturbations are created later and only from the test split."
+}

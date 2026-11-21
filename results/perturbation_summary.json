@@ -1,0 +1,16 @@
+{
+  "n_source_images": 108,
+  "n_perturbed_images": 2916,
+  "families": [
+    "brightness",
+    "contrast",
+    "gaussian_blur",
+    "gaussian_noise",
+    "jpeg",
+    "rotation",
+    "scale",
+    "illumination",
+    "localized_occlusion"
+  ],
+  "note": "Generated only from the held-out test split. Training images were not perturbed."
+}

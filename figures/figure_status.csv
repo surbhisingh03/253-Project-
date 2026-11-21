@@ -1,0 +1,13 @@
+figure,status
+fig01_class_distribution.png,measured
+fig02_baseline_metrics.png,measured
+fig03_recall_vs_intensity.png,measured
+fig04_fnr_vs_intensity.png,measured
+fig05_map_by_perturbation.png,measured
+fig06_confidence_degradation.png,measured
+fig07_iou_degradation.png,measured
+fig08_class_robustness_heatmap.png,measured
+fig09_confusion.png,measured
+fig10_risk_heatmap.png,measured
+fig11_atlas_mapping.png,source_mapped
+fig12_control_coverage.png,measured

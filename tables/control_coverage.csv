@@ -1,0 +1,11 @@
+risk_id,image_quality_gate,confidence_monitor,per_class_recall_monitor,human_review,artifact_integrity,change_management,redundant_inspection
+R1,1,1,1,1,0,1,1
+R2,1,1,1,1,0,0,1
+R3,1,1,1,1,0,1,0
+R4,1,1,1,1,0,0,1
+R5,1,1,1,1,0,1,0
+R6,0,1,1,1,1,1,1
+R7,0,0,1,1,1,1,0
+R8,1,1,1,1,0,1,1
+R9,0,1,1,1,0,1,1
+R10,1,1,1,1,0,1,1

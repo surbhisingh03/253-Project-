@@ -1,0 +1,11 @@
+risk_id,evidence_required,test_method,acceptance_threshold,owner,review_frequency,escalation_condition,corrective_action
+R1,Recall and FNR under blur at the validated level,Offline perturbation replay,Recall drop at level 2 blur <= 0.10,Quality engineer,Each model release and quarterly,Drop exceeds 0.10,Hold deployment and retune imaging or review threshold
+R2,Recall under localized occlusion,Occlusion replay on the frozen test set,Level-2 side fraction 0.55 does not drop recall by more than 0.15,Model developer,Each release,Drop exceeds 0.15,Require human review for low-confidence or partially occluded boards
+R3,Recall under brightness and illumination,Brightness and gradient replay,Level-2 recall drop <= 0.10,Process engineer,After lighting maintenance,Drop exceeds 0.10,Restore exposure and revalidate
+R4,Recall under JPEG and noise,Compression and noise replay,Level-2 recall drop <= 0.10,Model developer,Each release,Drop exceeds 0.10,Reject over-compressed frames
+R5,Recall under small rotation and scale,Geometric replay with transformed boxes,Level-2 recall drop <= 0.10,Vision engineer,After fixture changes,Drop exceeds 0.10,Add a fixture check and revalidate
+R6,Weight checksum matches the validated release,Hash comparison at load,Mismatch count = 0,ML operations,Every deployment,Any mismatch,Refuse to load and roll back
+R7,Annotation audit sample,Independent relabel of a sample,Disagreement rate documented and below the accepted limit,Data steward,Before each training run,Disagreement above the limit,Quarantine the batch
+R8,Input-distribution monitor,"Brightness, blur, and size statistics versus the validation window",Share of out-of-window images below 5 percent in a shift,Quality engineer,Every shift,Share exceeds 5 percent,Stop automatic accept and revalidate
+R9,Threshold and confidence log,Compare the running threshold with the approved record,Unapproved changes = 0,Quality manager,Weekly,Any unapproved change,Restore the approved threshold
+R10,Human-review completion,Audit log of low-confidence decisions,Review completion = 100 percent of flagged boards,Inspection supervisor,Daily,Any skipped review,Quarantine the affected lot

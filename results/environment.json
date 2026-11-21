@@ -1,0 +1,31 @@
+{
+  "python": "3.14.5",
+  "platform": "macOS-15.6-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "torch": "2.15.0",
+  "torch_mps": true,
+  "torch_cuda": false,
+  "ultralytics": "8.4.216",
+  "opencv": "5.1.0",
+  "numpy": "2.5.5",
+  "device": "mps",
+  "model_weights_name": "yolov5su.pt",
+  "image_size": 640,
+  "conf_threshold": 0.25,
+  "nms_iou": 0.45,
+  "epochs_requested": 30,
+  "batch": 8,
+  "classes": [
+    "missing_hole",
+    "mouse_bite",
+    "open_circuit",
+    "short",
+    "spur",
+    "spurious_copper"
+  ],
+  "pretrained": true,
+  "training_data": "Huang and Wei aligned annotated images, train split only",
+  "checkpoint": "/Users/surbhisingh/253 final proj/project/results/best.pt",
+  "source_checkpoint": "/Users/surbhisingh/253 final proj/project/runs/pcb_yolov5su/weights/best.pt",
+  "status": "trained_or_loaded"
+}

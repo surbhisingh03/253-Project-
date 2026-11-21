@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+data/raw/
+data/yolo/images/
+data/yolo/labels/
+data/perturbed/
+runs/
+*.pt
+*.onnx
+.ipynb_checkpoints/
